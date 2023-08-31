@@ -1,0 +1,13 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ScopicTask" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="android:itemBackground">@color/purple_500</item>
+        <item name="colorContainer">@color/purple_500</item>
+        <item name="colorAccent">@color/teal_700</item>
+    </style>
+
+    <style name="Theme.ScopicTask" parent="Base.Theme.ScopicTask" />
+
+</resources>

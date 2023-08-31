@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ScopicTask</string>
+    <string name="save">Save</string>
+    <string name="enter_an_item">Enter an item</string>
+    <string name="add">Add item</string>
+    <string name="edit">Edit item</string>
+    <string name="add_item">Add item</string>
+    <string name="logInText">Welcome</string>
+    <string name="emailText">Email</string>
+    <string name="passwordText">Password</string>
+    <string name="loginBtnText">Login</string>
+    <string name="noAccountText">Don\'t have an account?</string>
+    <string name="signUpText">Sign Up</string>
+    <string name="logoutText">Logout</string>
+    <string name="homeText">Home</string>
+    <string name="profileText">Profile</string>
+    <string name="backText">Back</string>
+    <string name="userEmailText">User Email:</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="emptyListMessage">Empty list! No items</string>
+</resources>

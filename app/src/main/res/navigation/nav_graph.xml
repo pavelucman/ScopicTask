@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/listItemFragment"
+        android:name="com.pavel.scopictask.ui.home.ListItemFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list_item">
+        <action
+            android:id="@+id/action_listItemFragment_to_listItemAddFragment"
+            app:destination="@id/listItemAddFragment" >
+            <argument
+                android:name="listItem_id"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/listItemAddFragment"
+        android:name="com.pavel.scopictask.ui.home.ListItemAddFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_list_item_add">
+        <action
+            android:id="@+id/action_listItemAddFragment_to_listItemFragment"
+            app:destination="@id/listItemFragment"
+            app:popUpTo="@id/listItemFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="listItem"
+            app:argType="com.pavel.scopictask.data.network.model.ListItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.pavel.scopictask.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/listItemFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.pavel.scopictask.ui.auth.SignInFragment"
+        android:label="SignIn"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.pavel.scopictask.ui.auth.SignUpFragment"
+        android:label="SignUp"
+        tools:layout="@layout/fragment_sign_up"/>
+
+    <action
+        android:id="@+id/action_listItemFragment"
+        app:destination="@id/listItemFragment"
+        app:popUpTo="@id/signInFragment"
+        app:popUpToInclusive="true" />
+
+</navigation>
